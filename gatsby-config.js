@@ -1,12 +1,12 @@
 require("dotenv").config({
   path: `.env.development`,
-})
+});
 
 module.exports = {
   siteMetadata: {
     title: "audiocore-poc",
-    siteUrl: 'https://audiocore.com',
-    author: '@gatsbyjs'
+    siteUrl: "https://audiocore.com",
+    author: "@gatsbyjs",
   },
   plugins: [
     {
@@ -27,6 +27,7 @@ module.exports = {
         name: "images",
         path: "./src/images/",
       },
+
       __key: "images",
     },
   ],
