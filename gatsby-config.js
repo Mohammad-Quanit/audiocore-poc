@@ -5,6 +5,8 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: "audiocore-poc",
+    siteUrl: 'https://audiocore.com',
+    author: '@gatsbyjs'
   },
   plugins: [
     {
