@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./layout.scss"
 import Navbar from "./navbar";
 
 const wrapperStyle = {
@@ -12,6 +12,7 @@ const footerStyle = {
 
 
 export default function Layout({ children }) {
+  console.log(children)
   return (
     <div>
       <div
