@@ -1,31 +1,29 @@
-import * as React from "react";
+import React from "react"
+// import { Link } from "gatsby"
 
-// markup
-const IndexPage = () => {
+import Layout from "../components/layout"
+// import Image from "../components/image"
+// import SEO from "../components/seo"
+
+const IndexPage = ({ data }) => {
   return (
-    <div>
-      <div
-        style={{
-          marginLeft: `auto`,
-          marginRight: `auto`,
-        }}
-      >
-        <header>
-          <Navbar />
-        </header>
-        <div style={{ margin: `0 auto`, maxWidth: 650, padding: `0 1rem` }}>
-          {children}
-        </div>
-      </div>
-      <footer style={footerStyle}>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://mohammad-quanit.github.io/" target="_blank" rel="noreferrer">
-          <span role="img" aria-label>💖️</span>
-        </a>
-      </footer>
-    </div>
-  );
-};
+    <Layout>
+      <h1>My blog posts:</h1>
+    </Layout>
+  )
+}
 
-export default IndexPage;
+export default IndexPage
+
+// export const pageQuery = graphql`
+//   query {
+//     allSanityPost(sort: { fields: date, order: ASC }) {
+//       nodes {
+//         title
+//         date(formatString: "DD MMMM YY")
+//         description
+//         _rawContent(resolveReferences: { maxDepth: 10 })
+//       }
+//     }
+//   }
+// `
