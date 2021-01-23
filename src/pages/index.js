@@ -1,29 +1,10 @@
-import React from "react"
-// import { Link } from "gatsby"
+import React from "react";
+import Layout from "../components/layout";
 
-import Layout from "../components/layout"
-// import Image from "../components/image"
-// import SEO from "../components/seo"
-
-const IndexPage = ({ data }) => {
+export default function Home() {
   return (
     <Layout>
-      <h1>My blog posts:</h1>
+      <h1>This is Home Page:</h1>
     </Layout>
-  )
+  );
 }
-
-export default IndexPage
-
-// export const pageQuery = graphql`
-//   query {
-//     allSanityPost(sort: { fields: date, order: ASC }) {
-//       nodes {
-//         title
-//         date(formatString: "DD MMMM YY")
-//         description
-//         _rawContent(resolveReferences: { maxDepth: 10 })
-//       }
-//     }
-//   }
-// `
