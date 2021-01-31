@@ -1,10 +1,9 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
-import Layout from "../components/layout";
 
 export default function Location({ data }) {
   return (
-    <Layout>
+    <>
       <h1>Locations:</h1>
       <ul>
         {data.allContentfulCity.edges.map(({ node: city }) => (
@@ -15,7 +14,7 @@ export default function Location({ data }) {
           </li>
         ))}
       </ul>
-    </Layout>
+    </>
   );
 }
 

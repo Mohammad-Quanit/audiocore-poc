@@ -1,6 +1,8 @@
-import { Link } from "gatsby";
-import PropTypes from "prop-types";
+import { Box, Heading, Link } from "@chakra-ui/react";
 import React from "react";
+import { Link as GatsbyLink } from "gatsby";
+import PropTypes from "prop-types";
+import ThemeToggle from "./toggle-theme";
 
 const linkStyle = {
   color: `white`,
@@ -21,23 +23,51 @@ const linkContainerStyle = {
 };
 
 const Header = ({ siteTitle }) => (
-  <header style={headerStyle}>
-    <div style={linkContainerStyle}>
-      <h1 style={{ margin: 0 }}>
-        <Link to="/" style={linkStyle}>
-          {siteTitle}
-        </Link>
+  <Box as="header" background="rebeccapurple" marginBottom="1.45rem">
+    <Box as="div" m="0 auto" maxW="960px" p="1.45rem 1.0875rem">
+      <Link as={GatsbyLink} to="/" style={linkStyle}>
+        {siteTitle}
+      </Link>
 
-        <Link to="/about" style={linkStyle}>
-          About
-        </Link>
+      <Link as={GatsbyLink} to="/about" style={linkStyle}>
+        About
+      </Link>
 
-        <Link to="/location" style={linkStyle}>
-          Location
-        </Link>
-      </h1>
-    </div>
-  </header>
+      <Link as={GatsbyLink} to="/location" style={linkStyle}>
+        Location
+      </Link>
+
+      <Link as={GatsbyLink} to="/contact" style={linkStyle}>
+        Contact Us
+      </Link>
+    </Box>
+
+    <Box as="div" position="fixed" right="20px" top="20px">
+      <ThemeToggle />
+    </Box>
+  </Box>
+
+  // <header style={headerStyle}>
+  //   <div style={linkContainerStyle}>
+  //     <h1 style={{ margin: 0 }}>
+  //       <Link to="/" style={linkStyle}>
+  //         {siteTitle}
+  //       </Link>
+
+  //       <Link to="/about" style={linkStyle}>
+  //         About
+  //       </Link>
+
+  //       <Link to="/location" style={linkStyle}>
+  //         Location
+  //       </Link>
+
+  //       <Link to="/contact" style={linkStyle}>
+  //         Contact Us
+  //       </Link>
+  //     </h1>
+  //   </div>
+  // </header>
 );
 
 Header.propTypes = {

@@ -1,7 +1,5 @@
 import React from "react";
-import { Link } from "gatsby";
 
-import Layout from "../components/layout";
 import SEO from "../components/seo";
 import Modal from "react-modal";
 
@@ -33,7 +31,7 @@ const About = () => {
     setIsOpen(false);
   }
   return (
-    <Layout>
+    <>
       <SEO title="About" />
       <h1>Hi from About page</h1>
       <div style={{ border: "2px solid black" }} onClick={openModal}>
@@ -74,7 +72,7 @@ const About = () => {
           ></iframe>
         </div>
       </Modal>
-    </Layout>
+    </>
   );
 };
 
