@@ -15,27 +15,30 @@ const renderFormComponent = {
   SubmitButton,
 };
 
-const Contact = ({ data }) => (
-  <>
-    <SEO title="Contact" />
-    <Container>
-      <FormiumForm
-        data={data.formiumForm}
-        components={renderFormComponent}
-        onSubmit={async (values) => {
-          // Send form values to Formium
-          await formium.submitForm("audioocore-form", values);
-          alert("Success");
-        }}
-      />
-    </Container>
-  </>
-);
+const Contact = ({ data }) => {
+  return (
+    <>
+      <SEO title="Contact" />
+      <Container>
+        <FormiumForm
+          data={data.formiumForm}
+          components={renderFormComponent}
+          onSubmit={async (values) => {
+            // Send form values to Formium
+            await formium.submitForm("audioocore-form", values);
+            alert("Success");
+          }}
+        />
+      </Container>
+    </>
+  );
+};
 
 export const query = graphql`
   {
     formiumForm(slug: { eq: "audioocore-form" }) {
       id
+      createAt
       name
       projectId
       schema
