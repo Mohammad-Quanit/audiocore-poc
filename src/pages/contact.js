@@ -16,6 +16,7 @@ const renderFormComponent = {
 };
 
 const Contact = ({ data }) => {
+  console.log(data)
   return (
     <>
       <SEO title="Contact" />
@@ -36,7 +37,7 @@ const Contact = ({ data }) => {
 
 export const query = graphql`
   {
-    formiumForm(slug: { eq: "audioocore-form" }) {
+    formiumForm(id: { eq: "6011b0a7d0a32c0001f4a7b2" }) {
       id
       createAt
       name
