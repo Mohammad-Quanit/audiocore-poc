@@ -36,7 +36,6 @@ export const query = graphql`
   {
     formiumForm(slug: { eq: "audioocore-form" }) {
       id
-      createAt
       name
       projectId
       schema
