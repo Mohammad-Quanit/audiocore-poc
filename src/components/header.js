@@ -23,7 +23,7 @@ const linkContainerStyle = {
 };
 
 const Header = ({ siteTitle }) => (
-  <Box as="header" background="rebeccapurple" marginBottom="1.45rem">
+  <Box as="header" style={headerStyle}>
     <Box as="div" m="0 auto" maxW="960px" p="1.45rem 1.0875rem">
       <Link as={GatsbyLink} to="/" style={linkStyle}>
         {siteTitle}
@@ -46,28 +46,6 @@ const Header = ({ siteTitle }) => (
       <ThemeToggle />
     </Box>
   </Box>
-
-  // <header style={headerStyle}>
-  //   <div style={linkContainerStyle}>
-  //     <h1 style={{ margin: 0 }}>
-  //       <Link to="/" style={linkStyle}>
-  //         {siteTitle}
-  //       </Link>
-
-  //       <Link to="/about" style={linkStyle}>
-  //         About
-  //       </Link>
-
-  //       <Link to="/location" style={linkStyle}>
-  //         Location
-  //       </Link>
-
-  //       <Link to="/contact" style={linkStyle}>
-  //         Contact Us
-  //       </Link>
-  //     </h1>
-  //   </div>
-  // </header>
 );
 
 Header.propTypes = {

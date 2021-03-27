@@ -14,8 +14,8 @@ import "./layout.css";
 const Layout = ({ children }) => {
   return (
     <>
-      <div className="containere">
-        <Header siteTitle="AudioCore" />
+      <div className="container">
+        <Header siteTitle={`Audio Core`} />
         <main>{children}</main>
         <footer className="footer">
           © {new Date().getFullYear()}, Built with
